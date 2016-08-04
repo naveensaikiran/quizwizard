@@ -92,6 +92,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'quizdb',
+#         'HOST' : 'localhost',
+#         'USER' : 'root',
+#         'PORT' : '3306',
+#         'PASSWORD' : 'naveen700'
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -129,7 +140,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
 
 import dj_database_url
 db_from_env = dj_database_url.config()
