@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav style="background-color: #2e6da4">
+    <div class="row">
+    <span class="logo navbar-brand pull-left">
+        Quiz !t
+    </span>
+    <span class="pull-right">
+        <form id="login_form" class="form-inline" name="login_form">
+            {% csrf_token %}
+            <input class="form-control" type="text" name="username" placeholder="User name"/>
+            <input class="form-control" type="password" name="password" placeholder="Password"/>
+            <input class="btn btn-primary" type="submit" name="log_in" value="log in" id="login_button">
+        </form>
+    </span>
+    </div>
+</nav>
+<div id="bottom">
+{#    <span id="signup-text">#}
+{#        Don't have an Account!#}
+{#        <br />#}
+{#        Sign up here#}
+{#    </span>#}
+    <div id="load_signup">
+        <button class="btn btn-primary center-block" data-toggle="modal" data-target="#modal1">Sign Up</button>
+        <span id="register-success" style="display: none">You are successfully registered</span>
+    </div>
+    <div class="modal fade"  id="modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <h3 class="text-center">Register</h3>
+                    <form id="register_form" name="register_form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <span class="text-danger" style="display:none" id="name-warning">Invalid Name</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-offset-3 col-sm-6">
+                                <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <span class="text-danger" style="display:none" id="email-warning">Invalid Email</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-offset-3 col-sm-6">
+                                <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <span class="text-danger" style="display:none" id="password-warning">Invalid Password</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-offset-3 col-sm-6">
+                                <input type="password" class="form-control form-control-lg" name="password" placeholder="Password" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group text-center col-sm-2 col-sm-offset-5">
+                                <input type="submit" class="form-control form-control-lg" name="submit" value="submit"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/validate.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+        nav{
+            height : 50px;
+            padding:10px;
+        }
+        #load_signup{
+            position: absolute;
+            left:50%;
+            top:50%;
+        }
+        .logo{
+            color: white;
+            padding-left: 10%;
+            font-size: large;
+        }
+        #login_button{
+            background-color: white;
+            color: blue;
+        }
+        #login_form{
+            padding-right: 10px;
+        }
+        #register-success{
+            font-size: larger;
+        }
+        #signup-text{
+            font-size:30px;
+            font-style: italic;
+        }
+        #bottom{
+            text-align:center;
+        }
