@@ -1,0 +1,101 @@
+2016-08-04T13:38:12.728558+00:00 app[web.1]: 
+2016-08-04T13:38:12.728565+00:00 app[web.1]: Starting development server at http://0.0.0.0:28074/
+2016-08-04T13:38:12.728561+00:00 app[web.1]: You have unapplied migrations; your app may not work properly until they are applied.
+2016-08-04T13:38:12.728563+00:00 app[web.1]: August 04, 2016 - 13:38:12
+2016-08-04T13:38:13.138339+00:00 heroku[web.1]: State changed from starting to up
+2016-08-04T13:38:28.668090+00:00 heroku[router]: at=info method=GET path="/" host=quizwizard.herokuapp.com request_id=8166036f-0c1f-4872-9800-63c2dd01beaf fwd="210.212.209.66" dyno=web.1 connect=0ms service=23ms status=200 bytes=4395
+2016-08-04T13:38:28.672266+00:00 app[web.1]: [04/Aug/2016 13:38:28] "GET / HTTP/1.1" 200 4096
+2016-08-04T13:38:29.438444+00:00 heroku[router]: at=info method=GET path="/static/css/bootstrap.min.css" host=quizwizard.herokuapp.com request_id=678822db-bca5-43b9-9079-3240efa765de fwd="210.212.209.66" dyno=web.1 connect=0ms service=13ms status=200 bytes=121448
+2016-08-04T13:38:29.443377+00:00 heroku[router]: at=info method=GET path="/static/js/bootstrap.min.js" host=quizwizard.herokuapp.com request_id=ad5a6c5d-15d5-4409-aa8b-3c4f9640d2c4 fwd="210.212.209.66" dyno=web.1 connect=0ms service=3ms status=200 bytes=37069
+2016-08-04T13:38:29.435946+00:00 app[web.1]: [04/Aug/2016 13:38:29] "GET /static/js/jquery.min.js HTTP/1.1" 200 97163
+2016-08-04T13:38:29.423049+00:00 app[web.1]: [04/Aug/2016 13:38:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121260
+2016-08-04T13:38:29.435251+00:00 app[web.1]: [04/Aug/2016 13:38:29] "GET /static/css/style.css HTTP/1.1" 200 671
+2016-08-04T13:38:29.443277+00:00 app[web.1]: [04/Aug/2016 13:38:29] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 36868
+2016-08-04T13:38:29.435526+00:00 heroku[router]: at=info method=GET path="/static/css/style.css" host=quizwizard.herokuapp.com request_id=b03496d1-fbef-4217-8cce-8893342be9b2 fwd="210.212.209.66" dyno=web.1 connect=0ms service=4ms status=200 bytes=856
+2016-08-04T13:38:29.438760+00:00 heroku[router]: at=info method=GET path="/static/js/jquery.min.js" host=quizwizard.herokuapp.com request_id=76ab02d5-8f92-4952-9bbd-b772df3a4bb8 fwd="210.212.209.66" dyno=web.1 connect=1ms service=8ms status=200 bytes=97364
+2016-08-04T13:38:29.751903+00:00 heroku[router]: at=info method=GET path="/static/js/validate.js" host=quizwizard.herokuapp.com request_id=f42454da-eac6-48f9-97cb-c8e81772762d fwd="210.212.209.66" dyno=web.1 connect=0ms service=4ms status=200 bytes=8014
+2016-08-04T13:38:29.751492+00:00 app[web.1]: [04/Aug/2016 13:38:29] "GET /static/js/validate.js HTTP/1.1" 200 7814
+2016-08-04T13:38:49.633389+00:00 heroku[router]: at=info method=POST path="/quiz/create/" host=quizwizard.herokuapp.com request_id=5ee22837-67ce-4400-87a6-e91adb404cd9 fwd="210.212.209.66" dyno=web.1 connect=1ms service=185ms status=500 bytes=16348
+2016-08-04T13:38:49.541998+00:00 app[web.1]: Internal Server Error: /quiz/create/
+2016-08-04T13:38:49.542022+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+2016-08-04T13:38:49.542019+00:00 app[web.1]: Traceback (most recent call last):
+2016-08-04T13:38:49.542027+00:00 app[web.1]:     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+2016-08-04T13:38:49.542029+00:00 app[web.1]:     user = User.objects.create_user(name,email,password)
+2016-08-04T13:38:49.542033+00:00 app[web.1]:     user.save(using=self._db)
+2016-08-04T13:38:49.542025+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+2016-08-04T13:38:49.542029+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/models.py", line 154, in create_user
+2016-08-04T13:38:49.542028+00:00 app[web.1]:   File "/app/App/views.py", line 29, in create_user
+2016-08-04T13:38:49.542035+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+2016-08-04T13:38:49.542030+00:00 app[web.1]:     return self._create_user(username, email, password, **extra_fields)
+2016-08-04T13:38:49.542031+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/models.py", line 148, in _create_user
+2016-08-04T13:38:49.542051+00:00 app[web.1]: ProgrammingError: relation "auth_user" does not exist
+2016-08-04T13:38:49.542052+00:00 app[web.1]: LINE 1: INSERT INTO "auth_user" ("password", "last_login", "is_super...
+2016-08-04T13:38:49.542053+00:00 app[web.1]:                     ^
+2016-08-04T13:38:49.542054+00:00 app[web.1]: 
+2016-08-04T13:38:49.542036+00:00 app[web.1]:     super(AbstractBaseUser, self).save(*args, **kwargs)
+2016-08-04T13:38:49.542036+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 708, in save
+2016-08-04T13:38:49.542037+00:00 app[web.1]:     force_update=force_update, update_fields=update_fields)
+2016-08-04T13:38:49.542038+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 736, in save_base
+2016-08-04T13:38:49.542040+00:00 app[web.1]:     updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+2016-08-04T13:38:49.542041+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 820, in _save_table
+2016-08-04T13:38:49.542041+00:00 app[web.1]:     result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+2016-08-04T13:38:49.542042+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 859, in _do_insert
+2016-08-04T13:38:49.542042+00:00 app[web.1]:     using=using, raw=raw)
+2016-08-04T13:38:49.542043+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+2016-08-04T13:38:49.542044+00:00 app[web.1]:     return getattr(self.get_queryset(), name)(*args, **kwargs)
+2016-08-04T13:38:49.542044+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+2016-08-04T13:38:49.542045+00:00 app[web.1]:     return query.get_compiler(using=using).execute_sql(return_id)
+2016-08-04T13:38:49.542046+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+2016-08-04T13:38:49.542046+00:00 app[web.1]:     cursor.execute(sql, params)
+2016-08-04T13:38:49.629541+00:00 app[web.1]: [04/Aug/2016 13:38:49] "POST /quiz/create/ HTTP/1.1" 500 16180
+2016-08-04T13:38:49.542024+00:00 app[web.1]:     response = self.process_exception_by_middleware(e, request)
+2016-08-04T13:38:49.542047+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+2016-08-04T13:38:49.542047+00:00 app[web.1]:     return super(CursorDebugWrapper, self).execute(sql, params)
+2016-08-04T13:38:49.542048+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+2016-08-04T13:38:49.542048+00:00 app[web.1]:     return self.cursor.execute(sql, params)
+2016-08-04T13:38:49.542049+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+2016-08-04T13:38:49.542050+00:00 app[web.1]:     six.reraise(dj_exc_type, dj_exc_value, traceback)
+2016-08-04T13:38:49.542050+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+2016-08-04T13:38:49.542051+00:00 app[web.1]:     return self.cursor.execute(sql, params)
+2016-08-04T13:38:50.947637+00:00 app[web.1]: Internal Server Error: /quiz/create/
+2016-08-04T13:38:50.947653+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/models.py", line 154, in create_user
+2016-08-04T13:38:50.947647+00:00 app[web.1]: Traceback (most recent call last):
+2016-08-04T13:38:50.947650+00:00 app[web.1]:     response = self.process_exception_by_middleware(e, request)
+2016-08-04T13:38:50.947651+00:00 app[web.1]:     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+2016-08-04T13:38:50.947652+00:00 app[web.1]:   File "/app/App/views.py", line 29, in create_user
+2016-08-04T13:38:50.947652+00:00 app[web.1]:     user = User.objects.create_user(name,email,password)
+2016-08-04T13:38:50.947650+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+2016-08-04T13:38:50.947656+00:00 app[web.1]:     user.save(using=self._db)
+2016-08-04T13:38:51.035956+00:00 heroku[router]: at=info method=POST path="/quiz/create/" host=quizwizard.herokuapp.com request_id=228fdeca-e442-4cf1-8885-dfa43d5cae29 fwd="210.212.209.66" dyno=web.1 connect=0ms service=174ms status=500 bytes=16347
+2016-08-04T13:38:50.947658+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 708, in save
+2016-08-04T13:38:50.947654+00:00 app[web.1]:     return self._create_user(username, email, password, **extra_fields)
+2016-08-04T13:38:50.947659+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 736, in save_base
+2016-08-04T13:38:50.947658+00:00 app[web.1]:     force_update=force_update, update_fields=update_fields)
+2016-08-04T13:38:50.947649+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+2016-08-04T13:38:50.947660+00:00 app[web.1]:     updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+2016-08-04T13:38:50.947657+00:00 app[web.1]:     super(AbstractBaseUser, self).save(*args, **kwargs)
+2016-08-04T13:38:50.947656+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+2016-08-04T13:38:50.947664+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+2016-08-04T13:38:50.947654+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/contrib/auth/models.py", line 148, in _create_user
+2016-08-04T13:38:50.947661+00:00 app[web.1]:     result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+2016-08-04T13:38:50.947662+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 859, in _do_insert
+2016-08-04T13:38:50.947662+00:00 app[web.1]:     using=using, raw=raw)
+2016-08-04T13:38:50.947664+00:00 app[web.1]:     return getattr(self.get_queryset(), name)(*args, **kwargs)
+2016-08-04T13:38:50.947665+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+2016-08-04T13:38:50.947661+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/base.py", line 820, in _save_table
+2016-08-04T13:38:50.947666+00:00 app[web.1]:     cursor.execute(sql, params)
+2016-08-04T13:38:50.947663+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+2016-08-04T13:38:50.947665+00:00 app[web.1]:     return query.get_compiler(using=using).execute_sql(return_id)
+2016-08-04T13:38:50.947667+00:00 app[web.1]:     return super(CursorDebugWrapper, self).execute(sql, params)
+2016-08-04T13:38:50.947668+00:00 app[web.1]:     return self.cursor.execute(sql, params)
+2016-08-04T13:38:50.947666+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+2016-08-04T13:38:50.947667+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+2016-08-04T13:38:50.947670+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+2016-08-04T13:38:50.947669+00:00 app[web.1]:     six.reraise(dj_exc_type, dj_exc_value, traceback)
+2016-08-04T13:38:50.947669+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+2016-08-04T13:38:50.947671+00:00 app[web.1]:     return self.cursor.execute(sql, params)
+2016-08-04T13:38:50.947673+00:00 app[web.1]:                     ^
+2016-08-04T13:38:50.947672+00:00 app[web.1]: ProgrammingError: relation "auth_user" does not exist
+2016-08-04T13:38:50.947674+00:00 app[web.1]: 
+2016-08-04T13:38:50.947672+00:00 app[web.1]: LINE 1: INSERT INTO "auth_user" ("password", "last_login", "is_super...
+2016-08-04T13:38:51.024144+00:00 app[web.1]: [04/Aug/2016 13:38:51] "POST /quiz/create/ HTTP/1.1" 500 16179

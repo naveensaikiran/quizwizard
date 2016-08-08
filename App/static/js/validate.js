@@ -4,6 +4,24 @@
 $(document).ready(function(){
    $("#register_form").submit(function(e){
        e.preventDefault();
+       $("#name-warning").hide();
+       $("#email-warning").hide();
+       $("#password-warning").hide();
+       if(document.forms["register_form"]["name"].value == '')
+       {
+           $("#name-warning").show();
+           return;
+       }
+       if(document.forms["register_form"]["email"].value=='')
+       {
+           $("#email-warning").show();
+           return;
+       }
+       if(document.forms["register_form"]["password"].value=='')
+       {
+           $("#password-warning").show();
+           return;
+       }
        $.post("/quiz/create/",
            {
                name : document.forms["register_form"]["name"].value,
