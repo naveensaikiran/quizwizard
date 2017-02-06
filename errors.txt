@@ -1,3 +1,13 @@
+//error logs okasari choodu
+//ok
+//u r great broo
+//it worked
+//you are greatest broo... your app looks awesoem!
+//great work
+
+//#respect
+
+//thank u ji ;)
 2016-08-04T13:38:12.728558+00:00 app[web.1]: 
 2016-08-04T13:38:12.728565+00:00 app[web.1]: Starting development server at http://0.0.0.0:28074/
 2016-08-04T13:38:12.728561+00:00 app[web.1]: You have unapplied migrations; your app may not work properly until they are applied.
