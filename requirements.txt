@@ -5,7 +5,7 @@ dj-database-url==0.4.1
 dj-static==0.0.6
 Django==1.9.5
 django-filter==0.13.0
-djangorestframework==3.3.3
+djangorestframework==3.9.1
 et-xmlfile==1.0.1
 gunicorn==19.6.0
 httpie==0.9.3
